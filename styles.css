@@ -1,0 +1,214 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Agrega esta línea para que el header sea fijo */
+    width: 100%; /* Ajusta el ancho al 100% */
+    top: 0; /* Ajusta la posición en la parte superior */
+    z-index: 1000; /* Asegura que el header esté encima de otros elementos */
+}
+
+header img {
+    height: 20px;
+    width: 70px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav a:hover {
+    color: #ff8c00;
+    transform: scale(1.2);
+    transition: color 0.3s, transform 0.3s;
+}
+
+.galeria {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.galeria img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.galeria img.visible {
+    opacity: 1;
+}
+
+.nosotros{
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    justify-content: center;
+}
+
+.nosotros h2{
+    color: #ff8c00;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    justify-content: center;
+}
+
+.nosotros p{
+    max-width: 900px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.perfiles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    color:#fff;
+}
+
+.perfiles {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.perfiles img {
+    width: 100px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid transparent; /* Añadido para tener un borde inicial transparente */
+}
+
+.perfiles div:hover img {
+    transform: translateY(20px); /* Desplaza la imagen hacia abajo cuando haces hover */
+    border-color: #ff8c00; /* Cambia el color del borde al hacer hover */
+    border-width: 6px; /* Ajusta el grosor del borde al hacer hover */
+}
+
+.perfiles div {
+    position: relative;
+}
+
+.perfiles div:hover .perfil-info {
+    display: block;
+}
+
+.perfil-info {
+    display: none;
+    position: absolute;
+    top: 100%; /* Ajusta la posición del menú según tu diseño */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    width: 200px; /* Ajusta el ancho del menú según tu preferencia */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega sombra para mejorar la apariencia */
+    z-index: 1; /* Asegura que el menú esté encima de las demás imágenes */
+}
+
+.descargar_app h2{
+    color: #ff8c00;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    justify-content: center;
+}
+
+.descargar_app{
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    justify-content: center;
+}
+
+.descargar_app p{
+    max-width: 900px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.descargar_app img{
+    max-width: 30%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Agrega este bloque al final de tu archivo CSS para alinear las imágenes a la derecha en pantallas pequeñas */
+@media only screen and (max-width: 900px) {
+    .perfiles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .perfiles > div {
+        margin-bottom: 10px; /* Agrega espacio entre las imágenes en pantallas pequeñas */
+    }
+}
+
+
+/* Agrega este bloque al final de tu archivo CSS */
+
+@media only screen and (max-width: 900px) {
+    header h1 {
+        display: none;
+    }
+}
+
+/* Nuevas reglas @media para mejorar la responsividad en tamaños más pequeños */
+@media only screen and (max-width: 600px) {
+    header img {
+        height: 15px;
+        width: 50px;
+    }
+
+    header {
+        padding: 5px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    .nosotros p {
+        font-size: 14px;
+    }
+
+    .perfiles img {
+        width: 80px;
+    }
+
+    .perfil-info {
+        width: 150px;
+    }
+}
