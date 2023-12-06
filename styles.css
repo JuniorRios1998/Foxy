@@ -158,11 +158,19 @@ nav a:hover {
     margin: 0 auto;
 }
 
-.descargar_app img{
+.descargar_app img {
     max-width: 30%;
     text-align: center;
     margin: 0 auto;
 }
+
+/* Ajusta el tamaño máximo de las imágenes en dispositivos móviles */
+@media only screen and (max-width: 800px) {
+    .descargar_app img {
+        max-width: 80%; /* Modifica el tamaño máximo de las imágenes para dispositivos móviles */
+    }
+}
+
 
 /* Agrega este bloque al final de tu archivo CSS para alinear las imágenes a la derecha en pantallas pequeñas */
 @media only screen and (max-width: 900px) {
