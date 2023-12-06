@@ -164,6 +164,19 @@ nav a:hover {
     margin: 0 auto;
 }
 
+/* ... (resto del contenido del archivo styles.css) */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
 /* Ajusta el tamaño máximo de las imágenes en dispositivos móviles */
 @media only screen and (max-width: 600px) {
     .descargar_app img {
