@@ -165,7 +165,7 @@ nav a:hover {
 }
 
 /* Ajusta el tamaño máximo de las imágenes en dispositivos móviles */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
     .descargar_app img {
         max-width: 80%; /* Modifica el tamaño máximo de las imágenes para dispositivos móviles */
     }
